@@ -14,7 +14,7 @@ const App = () => {
         setError(""); // Clear previous errors
 
         try {
-            const response = await fetch(`http://localhost:5000/api/greet?name=${name}`);
+            const response = await fetch(`https://greetme1.onrender.com/api/greet?name=${name}`);
             const data = await response.json();
 
             if (data.error) {
@@ -27,7 +27,7 @@ const App = () => {
         } catch (error) {
             setError("Failed to connect to the server.");
             setMessage("");
-        }
+        } 
     };
 
     return (
